@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple choice versus typed answers for live play</title>
+<meta name="description" content="Multiple choice versus typed answers looks like a question about difficulty. In live play it is mostly a question about speed, marking and fairness. I buil">
+<link rel="canonical" href="https://boardit.pythonanywhere.com/multiple-choice-versus-typed-answers-for-live-play/">
+<style>body{max-width:44rem;margin:2rem auto;padding:0 1rem;font:17px/1.65 -apple-system,Segoe UI,Roboto,sans-serif;color:#222;background:#fff}a{color:#0b5cad}h1{font-size:1.75rem;line-height:1.25}h2{font-size:1.25rem;margin-top:2rem}table{border-collapse:collapse;margin:1rem 0}td,th{border:1px solid #ccc;padding:.3rem .5rem;text-align:left}header,footer{font-size:.9rem;color:#666}code{background:#f3f3f3;padding:0 .2rem}</style>
+</head>
+<body>
+<header><a href="/">Quiz Format Notes</a> &middot; by Ahmed Moaz &middot; <a href="/about/">About</a></header>
+<main>
+<article>
+<h1>Multiple choice versus typed answers for live play</h1>
+<p><small>Ahmed Moaz &middot; 10 October 2026</small></p>
+<p>Multiple choice versus typed answers looks like a question about difficulty. In live play it is mostly a question about speed, marking and fairness. I build two games that sit on opposite sides of it: a trivia quiz where everyone taps a multiple-choice answer on their own phone, and a drawing game where every guess is typed and must be spelled correctly. Each format solves a problem the other creates.</p>
+<h2>What a tap does that typing cannot</h2>
+<p>A tap is fast and almost free of error. Nobody fumbles a keyboard against a clock, and nobody is marked wrong for a typo. In a live quiz on phones, that matters more than anything else, because the clock should measure knowing, not thumbs.</p>
+<p>It also makes the end of a question easy to detect. Once every player has tapped, there is nothing left to wait for, so a live game can move on before the clock runs out. With taps, that point often comes well before time is up.</p>
+<p>The cost is reading. Options take time to read, and a slow reader can lose the clock before they reach the right one. So my quiz shows the question on its own for a reading pause of 2 to 4.5 seconds, longer for longer questions, before the answer clock starts.</p>
+<h2>What typing does that a tap cannot</h2>
+<p>Typing asks for recall. Multiple choice asks for recognition. Recall vs recognition is the oldest distinction in this argument. William James wrote in 1890 that "things are impressed better by active than by passive repetition", and research on the testing effect has been exploring that idea since the early 1900s.</p>
+<p>Typing also removes the guessing floor. Guessing on multiple choice pays off at a fixed rate:</p>
+<table><thead><tr><th>Options</th><th>Blind guess is right</th></tr></thead><tbody><tr><td>2</td><td>50%</td></tr><tr><td>3</td><td>33%</td></tr><tr><td>4</td><td>25%</td></tr><tr><td>5</td><td>20%</td></tr></tbody></table>
+<p>How many options should a multiple choice question have, then? Enough that a blind guess is rare, and few enough to read on a phone before the clock bites. That trade is why four is so common.</p>
+<h2>Multiple choice vs short answer: the marking problem</h2>
+<p>Typed answers to trivia questions need a rule for what counts as right. Is a surname enough? Does a typo count? A human quizmaster can rule on each case. Trivia online has to decide in advance, in code, for every player at once.</p>
+<p>My drawing game takes the strict line: a guess only scores when it is spelled correctly. That is fair in a word game, where the word is the whole point. In a general-knowledge quiz it would punish the person who knew the answer and typed it badly.</p>
+<p>Typing on a phone adds a second cost. It is slower than tapping, and the gap is not the same for everyone, so a speed-scored round starts rewarding typists.</p>
+<h2>The advantages and disadvantages of multiple choice questions</h2>
+<ul><li>Multiple choice: fast, unambiguous marking, works on any phone; but it tests recognition and has a guessing floor.</li><li>Typed answers: tests recall, no guessing floor; but it needs a matching rule and favours fast typists under a clock.</li><li>Open-ended questions with a human judge: the most flexible, and the slowest; they suit a pub quiz better than an online quiz.</li></ul>
+<h2>Multiple choice versus typed answers in your own game</h2>
+<p>For quiz game design with a clock, playing with friends on phones in a mixed group, I would pick multiple choice every time. For a game where the answer is a single word everyone can spell, or where learning matters more than pace, typed answers earn their extra friction.</p>
+<p>This is design reasoning from two games I built, not a measurement. I have not timed typing against tapping, or compared how much either format teaches.</p>
+<p><em>Ahmed Moaz builds Boardit, a free browser game site. Drafted and reviewed with AI help; facts checked against the game's code.</em></p>
+</article>
+</main>
+<footer><p>Written by Ahmed Moaz.</p></footer>
+</body>
+</html>

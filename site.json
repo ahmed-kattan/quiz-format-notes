@@ -1,0 +1,13 @@
+{
+ "title": "Quiz Format Notes",
+ "short": "Quiz Format Notes",
+ "description": "How quiz formats change a game: multiple choice or typed answers, everyone answers or a race, rounds and timing. Notes by Ahmed Moaz.",
+ "canonical_base": "https://boardit.pythonanywhere.com/",
+ "base": "/",
+ "blurb": "The same questions can make a tense quiz or a dull one depending on the format. These notes compare the choices a quiz maker has: answer types, scoring, rounds and the clock.",
+ "footer": "Written by Ahmed Moaz.",
+ "about": [
+  "I am Ahmed Moaz. I build Boardit, a small site of free browser games that includes a trivia quiz.",
+  "This blog compares quiz formats: what multiple choice does that typed answers cannot, why everyone-answers scoring changes who wins, and how long a round should be."
+ ]
+}
